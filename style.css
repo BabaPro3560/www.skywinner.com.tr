@@ -125,3 +125,12 @@ footer {
     width: auto;
   }
   }
+footer a {
+  color: #00aaff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  }
