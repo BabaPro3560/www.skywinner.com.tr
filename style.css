@@ -25,7 +25,6 @@ header {
   position: sticky;
   top: 0;
   z-index: 100;
-  transition: all 0.3s ease;
 }
 
 .menubar.hide {
@@ -39,7 +38,7 @@ header {
   text-decoration: none;
   border-radius: 10px;
   font-weight: bold;
-  transition: 0.2s ease-in-out;
+  transition: 0.2s;
 }
 
 .menubar a:hover {
