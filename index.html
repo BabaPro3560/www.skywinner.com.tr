@@ -85,9 +85,10 @@
 <body>
   <header>SKYWINNER</header>
 
+  <!-- Üst Menü -->
   <nav class="menubar" id="ustMenu">
     <a href="#" onclick="goster('anasayfa', true)">ANA SAYFA</a>
-    <a href="#" onclick="goster('hakkimizda')">HAKKIMIZDA</a>
+    <a href="#" id="btnHakkimizda" onclick="goster('hakkimizda')">HAKKIMIZDA</a>
     <a href="#">MİMARİLER</a>
     <a href="#">PROJELER</a>
   </nav>
@@ -116,18 +117,31 @@
     </p>
   </section>
 
+  <!-- JavaScript -->
   <script>
     function goster(id, anaSayfaMi = false) {
+      // Bölümleri gizle
       document.getElementById("anasayfa").style.display = "none";
       document.getElementById("hakkimizda").style.display = "none";
 
       const ustMenu = document.getElementById("ustMenu");
+      const btnHakkimizda = document.getElementById("btnHakkimizda");
+
+      // Menü durumu
       if (anaSayfaMi) {
         ustMenu.classList.add("hide");
       } else {
         ustMenu.classList.remove("hide");
       }
 
+      // Hakkımızda butonu görünürlüğü
+      if (id === "hakkimizda") {
+        btnHakkimizda.style.display = "none";
+      } else {
+        btnHakkimizda.style.display = "inline-block";
+      }
+
+      // Seçilen bölümü göster
       document.getElementById(id).style.display = "block";
       document.getElementById(id).scrollIntoView({ behavior: "smooth" });
     }
