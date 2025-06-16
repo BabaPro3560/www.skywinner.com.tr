@@ -1,4 +1,3 @@
-/* === GENEL STİLLER === */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -9,7 +8,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* === ÜST BAŞLIK === */
 header {
   background-color: #00aaff;
   color: black;
@@ -18,7 +16,6 @@ header {
   font-size: 3rem;
 }
 
-/* === ÜST MENÜ === */
 .menubar {
   display: flex;
   justify-content: center;
@@ -50,7 +47,6 @@ header {
   color: #0077aa;
 }
 
-/* === ANA SAYFA BUTONLARI === */
 .main-buttons {
   padding: 40px;
   display: flex;
@@ -75,7 +71,6 @@ header {
   color: white;
 }
 
-/* === SAYFA BÖLÜMLERİ === */
 section {
   padding: 40px;
   display: none;
@@ -91,11 +86,10 @@ section h2 {
   color: #00aaff;
 }
 
-/* === TELİF (FOOTER) === */
 footer {
   text-align: center;
   padding: 15px;
   background-color: #f2f2f2;
   color: #333;
   font-size: 0.9rem;
-}
+  }
