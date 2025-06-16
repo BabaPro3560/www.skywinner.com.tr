@@ -1,9 +1,11 @@
+/* Genel ayarlar */
 body {
   margin: 0;
   background-color: white;
   font-family: Arial, sans-serif;
 }
 
+/* Başlık kısmı */
 header {
   background-color: #00aaff;
   padding: 30px;
@@ -16,24 +18,66 @@ header h1 {
   color: black;
 }
 
+/* Menü */
 .menu {
   padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
 }
 
 .menu a {
   display: block;
   width: 200px;
-  padding: 15px;
-  margin: 20px 0;
-  text-align: center;
+  padding: 16px;
   background-color: #00aaff;
   color: black;
   text-decoration: none;
   border-radius: 15px;
   font-size: 1.1rem;
   font-weight: bold;
+  text-align: center;
+  transition: background-color 0.2s;
 }
 
 .menu a:hover {
   background-color: #008fcc;
+}
+
+/* Hakkımızda bölümü */
+#hakkimizda {
+  padding: 40px;
+}
+
+#hakkimizda h2 {
+  color: #00aaff;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+#hakkimizda p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Mobil cihazlar için uyarlama */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .menu {
+    align-items: center;
+  }
+
+  .menu a {
+    width: 90%;
+    font-size: 1rem;
+  }
+
+  #hakkimizda {
+    padding: 20px;
+  }
 }
