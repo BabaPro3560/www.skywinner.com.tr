@@ -4,8 +4,22 @@
   <meta charset="UTF-8">
   <title>SkyWinner - Resmi Sayfa</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: black;
+    }
+    header {
+      background-color: #00aaff;
+      color: black;
+      text-align: center;
+      padding: 20px;
+      font-size: 3rem;
+    }
     .menubar {
       display: flex;
       justify-content: center;
@@ -17,18 +31,60 @@
       z-index: 100;
       transition: all 0.3s ease;
     }
-
     .menubar.hide {
       display: none;
+    }
+    .menubar a {
+      padding: 10px 20px;
+      background-color: white;
+      color: #00aaff;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: 0.2s ease-in-out;
+    }
+    .menubar a:hover {
+      background-color: #e0f6ff;
+      color: #0077aa;
+    }
+    .main-buttons {
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+    }
+    .main-buttons a {
+      background-color: #00aaff;
+      color: black;
+      padding: 15px 30px;
+      border-radius: 15px;
+      font-weight: bold;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+    .main-buttons a:hover {
+      background-color: #008fcc;
+      color: white;
+    }
+    section {
+      padding: 40px;
+      display: none;
+      background-color: white;
+      color: #333;
+    }
+    #anasayfa {
+      display: block;
+    }
+    section h2 {
+      color: #00aaff;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1 style="background-color:#00aaff; padding: 20px; margin: 0; text-align: center;">SKYWINNER</h1>
-  </header>
+  <header>SKYWINNER</header>
 
-  <!-- Üst Menü -->
   <nav class="menubar" id="ustMenu">
     <a href="#" onclick="goster('anasayfa', true)">ANA SAYFA</a>
     <a href="#" onclick="goster('hakkimizda')">HAKKIMIZDA</a>
@@ -48,7 +104,16 @@
   <!-- HAKKIMIZDA -->
   <section id="hakkimizda">
     <h2>Hakkımızda</h2>
-    <p>SkyWinner, teknoloji ve yazılım alanında yenilikçi çözümler geliştiren bir markadır...</p>
+    <p>
+      SkyWinner, teknoloji ve yazılım alanında yenilikçi çözümler geliştiren bir markadır.
+      Mobil işletim sistemi <strong>SeaOS</strong>, PC işletim sistemi <strong>WinnerOS</strong> ve TV platformu <strong>WINTVOS</strong> gibi farklı platformlar için
+      özgün sistemler tasarlamaktadır.
+    </p>
+    <p>
+      SkyWinner ekibi, kendi geliştirdiği <strong>SpaceWin</strong> işlemci ailesi ve özel <strong>X mimarileri</strong> ile
+      yüksek performanslı ve kullanıcı dostu deneyimler sunmayı hedeflemektedir.
+      Amacımız, özgür, esnek ve tamamen özelleştirilebilir dijital altyapılar oluşturarak teknolojiye yeni bir yön vermektir.
+    </p>
   </section>
 
   <script>
@@ -56,7 +121,6 @@
       document.getElementById("anasayfa").style.display = "none";
       document.getElementById("hakkimizda").style.display = "none";
 
-      // Menü gizle/göster
       const ustMenu = document.getElementById("ustMenu");
       if (anaSayfaMi) {
         ustMenu.classList.add("hide");
@@ -64,7 +128,6 @@
         ustMenu.classList.remove("hide");
       }
 
-      // Seçilen bölümü aç
       document.getElementById(id).style.display = "block";
       document.getElementById(id).scrollIntoView({ behavior: "smooth" });
     }
