@@ -4,83 +4,7 @@
   <meta charset="UTF-8">
   <title>SkyWinner - Resmi Sayfa</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: black;
-    }
-    header {
-      background-color: #00aaff;
-      color: black;
-      text-align: center;
-      padding: 20px;
-      font-size: 3rem;
-    }
-    .menubar {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      background-color: #00aaff;
-      padding: 10px;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      transition: all 0.3s ease;
-    }
-    .menubar.hide {
-      display: none;
-    }
-    .menubar a {
-      padding: 10px 20px;
-      background-color: white;
-      color: #00aaff;
-      text-decoration: none;
-      border-radius: 10px;
-      font-weight: bold;
-      transition: 0.2s ease-in-out;
-    }
-    .menubar a:hover {
-      background-color: #e0f6ff;
-      color: #0077aa;
-    }
-    .main-buttons {
-      padding: 40px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 20px;
-    }
-    .main-buttons a {
-      background-color: #00aaff;
-      color: black;
-      padding: 15px 30px;
-      border-radius: 15px;
-      font-weight: bold;
-      font-size: 1rem;
-      text-decoration: none;
-      transition: 0.2s;
-    }
-    .main-buttons a:hover {
-      background-color: #008fcc;
-      color: white;
-    }
-    section {
-      padding: 40px;
-      display: none;
-      background-color: white;
-      color: #333;
-    }
-    #anasayfa {
-      display: block;
-    }
-    section h2 {
-      color: #00aaff;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>SKYWINNER</header>
@@ -117,37 +41,35 @@
     </p>
   </section>
 
-  <!-- JavaScript -->
+  <!-- Sabit Telif -->
+  <footer>
+    © 2025 SkyWinner. Tüm hakları saklıdır.
+  </footer>
+
+  <!-- JS -->
   <script>
     function goster(id, anaSayfaMi = false) {
-      // Bölümleri gizle
       document.getElementById("anasayfa").style.display = "none";
       document.getElementById("hakkimizda").style.display = "none";
 
       const ustMenu = document.getElementById("ustMenu");
       const btnHakkimizda = document.getElementById("btnHakkimizda");
 
-      // Menü durumu
       if (anaSayfaMi) {
         ustMenu.classList.add("hide");
       } else {
         ustMenu.classList.remove("hide");
       }
 
-      // Hakkımızda butonu görünürlüğü
       if (id === "hakkimizda") {
         btnHakkimizda.style.display = "none";
       } else {
         btnHakkimizda.style.display = "inline-block";
       }
 
-      // Seçilen bölümü göster
       document.getElementById(id).style.display = "block";
       document.getElementById(id).scrollIntoView({ behavior: "smooth" });
     }
   </script>
 </body>
-</html>
-<footer>
-  © 2025 SkyWinner. Tüm hakları saklıdır.
-</footer>
+  </html>
