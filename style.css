@@ -1,4 +1,4 @@
-/* Genel */
+/* === GENEL STİLLER === */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -9,7 +9,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Başlık */
+/* === ÜST BAŞLIK === */
 header {
   background-color: #00aaff;
   color: black;
@@ -18,7 +18,7 @@ header {
   font-size: 3rem;
 }
 
-/* Üst Menü (Ana Sayfa - Hakkımızda - Mimariler - Projeler) */
+/* === ÜST MENÜ === */
 .menubar {
   display: flex;
   justify-content: center;
@@ -28,6 +28,11 @@ header {
   position: sticky;
   top: 0;
   z-index: 100;
+  transition: all 0.3s ease;
+}
+
+.menubar.hide {
+  display: none;
 }
 
 .menubar a {
@@ -45,7 +50,7 @@ header {
   color: #0077aa;
 }
 
-/* Ana Sayfa Butonları (Hakkımızda - Mimariler - Projeler) */
+/* === ANA SAYFA BUTONLARI === */
 .main-buttons {
   padding: 40px;
   display: flex;
@@ -70,7 +75,7 @@ header {
   color: white;
 }
 
-/* Sayfa bölümleri (hakkımızda vs) */
+/* === SAYFA BÖLÜMLERİ === */
 section {
   padding: 40px;
   display: none;
@@ -85,7 +90,12 @@ section {
 section h2 {
   color: #00aaff;
 }
-/* Menü gizleme için ek sınıf */
-.menubar.hide {
-  display: none;
+
+/* === TELİF (FOOTER) === */
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #f2f2f2;
+  color: #333;
+  font-size: 0.9rem;
 }
