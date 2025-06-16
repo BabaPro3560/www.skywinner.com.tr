@@ -85,3 +85,7 @@ section {
 section h2 {
   color: #00aaff;
 }
+/* Menü gizleme için ek sınıf */
+.menubar.hide {
+  display: none;
+}
