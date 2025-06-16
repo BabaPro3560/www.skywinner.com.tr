@@ -1,16 +1,13 @@
-/* Temel gövde ve font */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: black;
 }
 
-/* Sayfa geçişleri yumuşak */
 html {
   scroll-behavior: smooth;
 }
 
-/* Sayfa başlığı */
 header {
   background-color: #00aaff;
   color: black;
@@ -19,7 +16,6 @@ header {
   font-size: 3rem;
 }
 
-/* Üst menü çubuğu */
 .menubar {
   display: flex;
   justify-content: center;
@@ -31,12 +27,10 @@ header {
   z-index: 100;
 }
 
-/* Ana sayfa açıldığında menüyü gizlemek için */
 .menubar.hide {
   display: none;
 }
 
-/* Menüdeki bağlantılar */
 .menubar a {
   padding: 10px 20px;
   background-color: white;
@@ -52,7 +46,6 @@ header {
   color: #0077aa;
 }
 
-/* Ana sayfadaki büyük butonlar */
 .main-buttons {
   padding: 40px;
   display: flex;
@@ -77,7 +70,6 @@ header {
   color: white;
 }
 
-/* Sayfa bölümleri */
 section {
   padding: 40px;
   display: none;
@@ -85,24 +77,15 @@ section {
   color: #333;
 }
 
-/* Ana sayfa varsayılan olarak açık */
 #anasayfa {
   display: block;
 }
 
-/* Başlıklar */
 section h2 {
   color: #00aaff;
 }
 
-/* Footer (alt bilgi, telif) */
-footer {
-  text-align: center;
-  padding: 15px;
-  background-color: #f2f2f2;
-  color: #333;
-  font-size: 0.9rem;
-}
+/* Sabit Telif Bilgisi */
 footer {
   position: fixed;
   bottom: 0;
@@ -114,8 +97,9 @@ footer {
   color: #333;
   font-size: 0.9rem;
   z-index: 1000;
-  }
-/* Dikey (portrait) için */
+}
+
+/* Dikey ekran (telefon gibi) */
 @media (orientation: portrait) {
   body {
     font-size: 1rem;
@@ -127,7 +111,7 @@ footer {
   }
 }
 
-/* Yatay (landscape) için */
+/* Yatay ekran (tablet, PC gibi) */
 @media (orientation: landscape) {
   body {
     font-size: 1.1rem;
@@ -141,39 +125,3 @@ footer {
     width: auto;
   }
   }
-@media (orientation: portrait) {
-  body {
-    font-size: 1rem;
-  }
-  .main-buttons a {
-    font-size: 1rem;
-    width: 100%;
-    text-align: center;
-  }
-}
-
-@media (orientation: landscape) {
-  body {
-    font-size: 1.1rem;
-  }
-  .main-buttons {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .main-buttons a {
-    width: auto;
-  }
-  }
-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  padding: 10px;
-  background-color: #f2f2f2;
-  color: #333;
-  font-size: 0.9rem;
-  z-index: 1000;
-}
