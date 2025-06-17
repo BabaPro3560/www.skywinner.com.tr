@@ -22,11 +22,9 @@ nav.menubar {
   background-color: #ffffff;
   padding: 20px 0;
   gap: 20px;
-  position: relative;
 }
 
 nav.menubar a {
-  position: relative;
   padding: 10px 20px;
   background-color: #00aaff;
   color: #fff;
@@ -38,17 +36,6 @@ nav.menubar a {
 
 nav.menubar a:hover {
   background-color: #0088cc;
-}
-
-nav.menubar a::before {
-  content: '';
-  position: absolute;
-  top: -25px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 2px;
-  height: 25px;
-  background-color: #00aaff;
 }
 
 main {
@@ -71,4 +58,4 @@ footer {
   font-size: 0.9em;
   margin-top: 40px;
   border-top: 1px solid #ccc;
-  }
+}
