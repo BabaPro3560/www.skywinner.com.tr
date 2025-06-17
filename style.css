@@ -7,60 +7,68 @@ body {
 }
 
 header {
-  background-color: #000;
-  color: #00aaff;
+  background-color: #00aaff;
+  color: #000;
   padding: 20px;
   text-align: center;
-  font-size: 2em;
+  font-size: 2.5em;
   font-weight: bold;
 }
 
 nav.menubar {
   display: flex;
   justify-content: center;
-  background-color: #111;
-  padding: 10px 0;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 20px 0;
+  gap: 20px;
   position: relative;
 }
 
 nav.menubar a {
   position: relative;
-  margin: 0 20px;
+  padding: 10px 20px;
+  background-color: #00aaff;
+  color: #fff;
   text-decoration: none;
-  color: #00aaff;
+  border-radius: 12px;
   font-weight: bold;
-  font-size: 1em;
-  padding: 5px 10px;
-  transition: color 0.3s;
+  transition: background-color 0.3s;
 }
 
 nav.menubar a:hover {
-  color: #ffaa00;
+  background-color: #0088cc;
 }
 
-/* 🎯 Her butonun üstüne çizgi */
 nav.menubar a::before {
   content: '';
   position: absolute;
-  top: -20px; /* çizginin yukarı mesafesi */
+  top: -25px;
   left: 50%;
   transform: translateX(-50%);
   width: 2px;
-  height: 20px;
+  height: 25px;
   background-color: #00aaff;
 }
 
-/* Alt içerik */
 main {
-  padding: 30px;
+  padding: 40px;
   max-width: 900px;
   margin: auto;
+  font-size: 1.1em;
+  line-height: 1.6em;
+}
+
+h2 {
+  color: #00aaff;
 }
 
 footer {
   text-align: center;
   padding: 20px;
-  background-color: #111;
-  color: #ccc;
+  background-color: #f0f0f0;
+  color: #444;
   font-size: 0.9em;
-}
+  margin-top: 40px;
+  border-top: 1px solid #ccc;
+  }
