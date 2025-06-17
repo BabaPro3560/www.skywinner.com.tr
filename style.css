@@ -22,6 +22,7 @@ nav.menubar {
   background-color: #ffffff;
   padding: 20px 0;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 nav.menubar a {
@@ -58,4 +59,28 @@ footer {
   font-size: 0.9em;
   margin-top: 40px;
   border-top: 1px solid #ccc;
+}
+
+/* === YATAY (LANDSCAPE) MOD === */
+@media screen and (orientation: landscape) {
+  body {
+    background-color: #ffffff;
+  }
+
+  nav.menubar {
+    flex-direction: row;
+  }
+}
+
+/* === DİKEY (PORTRAIT) MOD === */
+@media screen and (orientation: portrait) {
+  nav.menubar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav.menubar a {
+    width: 80%;
+    text-align: center;
+  }
 }
