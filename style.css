@@ -1,136 +1,66 @@
 body {
   margin: 0;
+  padding: 0;
   font-family: Arial, sans-serif;
-  background-color: black;
-}
-
-html {
-  scroll-behavior: smooth;
+  background-color: #ffffff;
+  color: #000;
 }
 
 header {
-  background-color: #00aaff;
-  color: black;
-  text-align: center;
+  background-color: #000;
+  color: #00aaff;
   padding: 20px;
-  font-size: 3rem;
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
 }
 
-.menubar {
+nav.menubar {
   display: flex;
   justify-content: center;
-  gap: 15px;
-  background-color: #00aaff;
-  padding: 10px;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  background-color: #111;
+  padding: 10px 0;
+  position: relative;
 }
 
-.menubar.hide {
-  display: none;
-}
-
-.menubar a {
-  padding: 10px 20px;
-  background-color: white;
-  color: #00aaff;
+nav.menubar a {
+  position: relative;
+  margin: 0 20px;
   text-decoration: none;
-  border-radius: 10px;
-  font-weight: bold;
-  transition: 0.2s ease-in-out;
-}
-
-.menubar a:hover {
-  background-color: #e0f6ff;
-  color: #0077aa;
-}
-
-.main-buttons {
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 20px;
-}
-
-.main-buttons a {
-  background-color: #00aaff;
-  color: black;
-  padding: 15px 30px;
-  border-radius: 15px;
-  font-weight: bold;
-  font-size: 1rem;
-  text-decoration: none;
-  transition: 0.2s;
-}
-
-.main-buttons a:hover {
-  background-color: #008fcc;
-  color: white;
-}
-
-section {
-  padding: 40px;
-  display: none;
-  background-color: white;
-  color: #333;
-}
-
-#anasayfa {
-  display: block;
-}
-
-section h2 {
   color: #00aaff;
+  font-weight: bold;
+  font-size: 1em;
+  padding: 5px 10px;
+  transition: color 0.3s;
 }
 
-/* Sabit Telif Bilgisi */
+nav.menubar a:hover {
+  color: #ffaa00;
+}
+
+/* 🎯 Her butonun üstüne çizgi */
+nav.menubar a::before {
+  content: '';
+  position: absolute;
+  top: -20px; /* çizginin yukarı mesafesi */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 20px;
+  background-color: #00aaff;
+}
+
+/* Alt içerik */
+main {
+  padding: 30px;
+  max-width: 900px;
+  margin: auto;
+}
+
 footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
   text-align: center;
-  padding: 10px;
-  background-color: #f2f2f2;
-  color: #333;
-  font-size: 0.9rem;
-  z-index: 1000;
+  padding: 20px;
+  background-color: #111;
+  color: #ccc;
+  font-size: 0.9em;
 }
-
-/* Dikey ekran (telefon gibi) */
-@media (orientation: portrait) {
-  body {
-    font-size: 1rem;
-  }
-  .main-buttons a {
-    font-size: 1rem;
-    width: 100%;
-    text-align: center;
-  }
-}
-
-/* Yatay ekran (tablet, PC gibi) */
-@media (orientation: landscape) {
-  body {
-    font-size: 1.1rem;
-  }
-  .main-buttons {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .main-buttons a {
-    width: auto;
-  }
-  }
-footer a {
-  color: #00aaff;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-footer a:hover {
-  text-decoration: underline;
-  }
