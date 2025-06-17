@@ -1,82 +1,47 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>SkyWinner - Resmi Sayfa</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>SKYWINNER</header>
 
-  <!-- Üst Menü -->
-  <nav class="menubar" id="ustMenu">
-    <a href="#" onclick="goster('anasayfa', true)">ANA SAYFA</a>
-    <a href="#" id="btnHakkimizda" onclick="goster('hakkimizda')">HAKKIMIZDA</a>
-    <a href="#">MİMARİLER</a>
-    <a href="#">PROJELER</a>
+  <header id="anasayfa">SKYWINNER</header>
+
+  <nav class="menubar">
+    <a href="#anasayfa">ANA SAYFA</a>
+    <a href="#hakkimizda">HAKKIMIZDA</a>
+    <a href="#mimariler">MİMARİLER</a>
+    <a href="#projeler">PROJELER</a>
   </nav>
 
-  <!-- ANA SAYFA -->
-  <section id="anasayfa">
-    <div class="main-buttons">
-      <a href="#" onclick="goster('hakkimizda')">HAKKIMIZDA</a>
-      <a href="#">MİMARİLER</a>
-      <a href="#">PROJELER</a>
-    </div>
-  </section>
+  <main>
+    <section id="hakkimizda">
+      <h2>Hakkımızda</h2>
+      <p>SkyWinner, teknoloji ve yazılım alanında yenilikçi çözümler geliştiren bir markadır. Mobil işletim sistemi <strong>SeaOS</strong>, PC işletim sistemi <strong>WinnerOS</strong> ve TV platformu <strong>WINTVOS</strong> gibi özgün sistemler tasarlamaktadır.</p>
+      <p>SkyWinner, kendi işlemci ailesi olan <strong>SpaceWin</strong> markasını telefon, tablet ve PC cihazlarında kullanır. Bu işlemciler <strong>CoreX mimarisi</strong> ile üretilir: CoreX40 (mobil), CoreX60 (PC).</p>
+      <p>SkyWinner TV cihazlarında ise <strong>Shine</strong> markalı işlemciler kullanılır. Bu işlemcilerin modeli <strong>Pro S</strong>, mimarisi ise <strong>S80</strong> olarak adlandırılmıştır. WINTVOS işletim sistemi Shine Pro S ile tam uyumlu çalışmaktadır.</p>
+      <p>SkyWinner ekosistemi telefon, tablet, saat, kulaklık, TV, PC ve USB depolama gibi geniş bir ürün yelpazesinde yayılmakta; katlanabilir ve flip telefon modelleriyle de farklı kullanıcı deneyimleri sunmaktadır.</p>
+    </section>
 
-  <!-- HAKKIMIZDA -->
-  <section id="hakkimizda">
-    <h2>Hakkımızda</h2>
-    <p>
-      SkyWinner, teknoloji ve yazılım alanında yenilikçi çözümler geliştiren bir markadır.
-      Mobil işletim sistemi <strong>SeaOS</strong>, PC işletim sistemi <strong>WinnerOS</strong> ve TV platformu <strong>WINTVOS</strong> gibi farklı platformlar için
-      özgün sistemler tasarlamaktadır.
-    </p>
-    <p>
-      SkyWinner, kendi işlemci ailesi olan <strong>SpaceWin</strong> markasını telefon, tablet ve PC cihazlarında kullanır.
-      Bu işlemciler <strong>CoreX mimarisi</strong> ile üretilir: CoreX40 (mobil), CoreX60 (PC), CoreX80 (TV).
-    </p>
-    <p>
-      SkyWinner TV cihazlarında ise <strong>Shine</strong> markalı işlemciler kullanılır. Bu işlemcilerin modeli <strong>Pro S</strong>, mimarisi ise <strong>S80</strong> olarak adlandırılmıştır.
-      WINTVOS işletim sistemi Shine Pro S işlemcilerle tam uyumlu çalışmaktadır.
-    </p>
-    <p>
-      SkyWinner ekosistemi telefon, tablet, saat, kulaklık, TV, PC ve USB depolama gibi geniş bir ürün yelpazesinde yayılmakta; katlanabilir ve flip telefon modelleriyle de farklı kullanıcı deneyimleri sunmaktadır.
-    </p>
-  </section>
+    <section id="mimariler">
+      <h2>Mimariler</h2>
+      <p>64-bit destekli sistemler için aşağıdaki mimari dosyasını indirebilirsiniz:</p>
+      <a href="indir/x64.swarch" download>X64.swarch indir</a>
+    </section>
 
-  <!-- SABİT TELİF + E-POSTA -->
+    <section id="projeler">
+      <h2>Projeler</h2>
+      <p>Yeni nesil işletim sistemleri ve sanal makine çözümleri yakında burada yer alacak!</p>
+    </section>
+  </main>
+
   <footer>
-    © 2025 SkyWinner. Tüm hakları saklıdır. <br>
-    <a href="mailto:babaproxx988@gmail.com">babaproxx988@gmail.com</a>
+    <p>© 2025 SkyWinner. Tüm hakları saklıdır.<br />
+    <a href="mailto:babaproxx988@gmail.com">babaproxx988@gmail.com</a></p>
   </footer>
 
-  <!-- JS: Sayfa Geçişleri -->
-  <script>
-    function goster(id, anaSayfaMi = false) {
-      document.getElementById("anasayfa").style.display = "none";
-      document.getElementById("hakkimizda").style.display = "none";
-
-      const ustMenu = document.getElementById("ustMenu");
-      const btnHakkimizda = document.getElementById("btnHakkimizda");
-
-      if (anaSayfaMi) {
-        ustMenu.classList.add("hide");
-      } else {
-        ustMenu.classList.remove("hide");
-      }
-
-      if (id === "hakkimizda") {
-        btnHakkimizda.style.display = "none";
-      } else {
-        btnHakkimizda.style.display = "inline-block";
-      }
-
-      document.getElementById(id).style.display = "block";
-      document.getElementById(id).scrollIntoView({ behavior: "smooth" });
-    }
-  </script>
 </body>
-    </html>
+</html>
