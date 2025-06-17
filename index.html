@@ -1,28 +1,63 @@
-<!DOCTYPE html><html lang="tr">
+<!DOCTYPE html>
+<html lang="tr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SkyWinner - Resmi Sayfa</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="stil.css" />
 </head>
 <body>
-  <header>SKYWINNER</header>  <div class="buttons" id="main-buttons">
-    <button onclick="showSection('anasayfa')">ANA SAYFA</button>
-    <button onclick="showSection('hakkimizda')">HAKKIMIZDA</button>
-    <button onclick="showSection('mimariler')">MİMARİLER</button>
-    <button onclick="showSection('projeler')">PROJELER</button>
-  </div>  <section id="hakkimizda">
-    <h2>Hakkımızda</h2>
-    <p>SkyWinner, teknoloji ve yazılım alanında yenilikçi çözümler geliştiren bir markadır. Mobil işletim sistemi <strong>SeaOS</strong>, PC işletim sistemi <strong>WinnerOS</strong> ve TV platformu <strong>WINTVOS</strong> gibi farklı platformlar için özgün sistemler tasarlamaktadır.</p>
-    <p>SkyWinner, kendi işlemci ailesi olan <strong>SpaceWin</strong> markasını telefon, tablet ve PC cihazlarında kullanır. Bu işlemciler <strong>CoreX mimarisi</strong> ile üretilir: CoreX40 (mobil), CoreX60 (PC).</p>
-    <p>SkyWinner TV cihazlarında ise <strong>Shine</strong> markalı işlemciler kullanılır. Bu işlemcilerin modeli <strong>Pro S</strong>, mimarisi ise <strong>S80</strong> olarak adlandırılmıştır. WINTVOS işletim sistemi Shine Pro S işlemcilerle tam uyumlu çalışmaktadır.</p>
-    <p>SkyWinner ekosistemi telefon, tablet, saat, kulaklık, TV, PC ve USB depolama gibi geniş bir ürün yelpazesinde yayılmakta; katlanabilir ve flip telefon modelleriyle de farklı kullanıcı deneyimleri sunmaktadır.</p>
-  </section>  <footer>
-    <p>© 2025 SkyWinner. Tüm hakları saklıdır.</p>
-  </footer>  <script>
-    function showSection(sectionId) {
-      document.querySelectorAll('section').forEach(sec => sec.style.display = 'none');
-      document.getElementById(sectionId).style.display = 'block';
+  <header>
+    <h1>SKYWINNER</h1>
+    <nav>
+      <button onclick="showSection('anasayfa')">ANA SAYFA</button>
+      <button onclick="showSection('hakkimizda')">HAKKIMIZDA</button>
+      <button onclick="showSection('mimariler')">MİMARİLER</button>
+      <button onclick="showSection('projeler')">PROJELER</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="anasayfa" class="section">
+      <!-- Boş sade ana sayfa -->
+    </section>
+
+    <section id="hakkimizda" class="section" style="display: none;">
+      <h2>Hakkımızda</h2>
+      <p>SkyWinner, teknoloji ve yazılım alanında yenilikçi çözümler geliştiren bir markadır. Mobil işletim sistemi <strong>SeaOS</strong>, PC işletim sistemi <strong>WinnerOS</strong> ve TV platformu <strong>WINTVOS</strong> gibi farklı platformlar için özgün sistemler tasarlamaktadır.</p>
+
+      <p>SkyWinner, kendi işlemci ailesi olan <strong>SpaceWin</strong> markasını telefon, tablet ve PC cihazlarında kullanır. Bu işlemciler <strong>CoreX mimarisi</strong> ile üretilir: CoreX40 (mobil), CoreX60 (PC).</p>
+
+      <p>SkyWinner TV cihazlarında ise <strong>Shine</strong> markalı işlemciler kullanılır. Bu işlemcilerin modeli <strong>Pro S</strong>, mimarisi ise <strong>S80</strong> olarak adlandırılmıştır. WINTVOS işletim sistemi Shine Pro S işlemcilerle tam uyumlu çalışmaktadır.</p>
+
+      <p>SkyWinner ekosistemi telefon, tablet, saat, kulaklık, TV, PC ve USB depolama gibi geniş bir ürün yelpazesinde yayılmakta; katlanabilir ve flip telefon modelleriyle de farklı kullanıcı deneyimleri sunmaktadır.</p>
+    </section>
+
+    <section id="mimariler" class="section" style="display: none;">
+      <h2>Mimariler</h2>
+      <p>CoreX mimarileri (X40, X60) ve Shine mimarisi (S80) hakkında teknik bilgiler burada yer alacaktır.</p>
+    </section>
+
+    <section id="projeler" class="section" style="display: none;">
+      <h2>Projeler</h2>
+      <p>SkyWinner A01, SeaOS 7.0, WinnerOS ve WINTVOS gibi projeler geliştirilmektedir.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 SkyWinner. Tüm hakları saklıdır. <br />
+    <a href="mailto:babaproxx988@gmail.com">babaproxx988@gmail.com</a></p>
+  </footer>
+
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(section => section.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
     }
-  </script></body>
-</html>
+
+    // Sayfa yüklendiğinde ana sayfa görünsün
+    showSection('anasayfa');
+  </script>
+</body>
+        </html>
