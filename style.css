@@ -1,65 +1,27 @@
-/* Genel arka plan ve yazı stili */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  background-color: white;
-  color: #000;
-  text-align: center;
-}
+body { margin: 0; padding: 0; background-color: #ffffff; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #333333; }
 
-/* Üst başlık (SKYWINNER yazısı) */
-header {
-  background-color: #00aaff;
-  color: black;
-  padding: 20px 0;
-  font-size: 32px;
-  font-weight: bold;
-}
+header { background-color: #03A9F4; padding: 20px 0; text-align: center; font-size: 36px; font-weight: bold; color: #000000; border-bottom-left-radius: 50px; border-bottom-right-radius: 50px; }
 
-/* Navigasyon butonları */
-nav {
-  margin-top: 20px;
-}
+.navbar { text-align: center; margin: 20px 0; }
 
-nav button {
-  background-color: #00aaff;
-  border: none;
-  color: white;
-  padding: 12px 24px;
-  margin: 0 10px;
-  border-radius: 12px;
-  font-size: 14px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
+.navbar a { background-color: #03A9F4; color: #ffffff; border: none; padding: 12px 24px; margin: 8px; border-radius: 10px; font-weight: bold; text-decoration: none; display: inline-block; transition: background-color 0.3s ease, transform 0.2s ease; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
 
-nav button:hover {
-  background-color: #0077cc;
-}
+.navbar a:hover { background-color: #0288D1; transform: scale(1.05); }
 
-/* İçerik alanı */
-section {
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 0 20px;
-  text-align: left;
-}
+section { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
 
-/* Başlık stilleri */
-h2 {
-  color: #0099ff;
-  font-size: 24px;
-  margin-bottom: 16px;
-}
+h2 { color: #2196F3; font-size: 24px; margin-bottom: 16px; }
 
-/* Footer (alt bilgi) */
-footer {
-  background-color: #f0f0f0;
-  color: #333;
-  padding: 15px;
-  font-size: 14px;
-  margin-top: 60px;
-  border-top: 1px solid #ccc;
-}
+footer { background-color: #eeeeee; text-align: center; padding: 20px; font-size: 14px; border-top: 1px solid #ccc; margin-top: 40px; }
+
+footer a { color: #0000ee; text-decoration: underline; }
+
+@media (max-width: 768px) { .navbar a { display: block; margin: 10px auto; } }
+
+body.dark-mode { background-color: #121212; color: #f0f0f0; }
+
+body.dark-mode header { background-color: #0288D1; color: #ffffff; }
+
+body.dark-mode .navbar a { background-color: #0288D1; color: #ffffff; }
+
+body.dark-mode footer { background-color: #1e1e1e; color: #aaaaaa; }
